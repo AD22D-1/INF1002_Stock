@@ -13,6 +13,7 @@ def main():
     # Get user input for the stock name and the window size
     stock_name = input("Which stock market would you like to see: ").strip()
     window_size = input("Enter SMA window size (e.g., 50): ").split(',')
+    # Convert each item in window_size from a string to an integer, removing any extra spaces
     window_size = [int(x.strip()) for x in window_size]
     # Plot the price and SMA
     plot_price_and_sma(stock_name, window_size)
